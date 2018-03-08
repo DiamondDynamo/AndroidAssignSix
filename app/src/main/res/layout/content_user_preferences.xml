@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.charley.assignfour.UserPreferences"
+    tools:showIn="@layout/activity_user_preferences">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:toos="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserPreferences">
+
+        <EditText
+            android:id="@+id/userIn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_prompt"
+            android:inputType="text|textCapWords|textAutoCorrect"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:id="@+id/userIn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_prompt"
+            android:inputType="text|textCapWords|textAutoCorrect"
+            android:layout_below="@id/userIn1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/userIn1"
+            android:layout_toStartOf="@id/userIn1"
+            android:layout_alignRight="@id/userIn1"
+            android:layout_alignEnd="@id/userIn1"/>
+
+        <EditText
+            android:id="@+id/userIn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_prompt"
+            android:inputType="text|textCapWords|textAutoCorrect"
+            android:layout_below="@id/userIn2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/userIn1"
+            android:layout_toStartOf="@id/userIn1"
+            android:layout_alignRight="@id/userIn1"
+            android:layout_alignEnd="@id/userIn1"/>
+
+        <EditText
+            android:id="@+id/userIn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_prompt"
+            android:inputType="text|textCapWords|textAutoCorrect"
+            android:layout_below="@id/userIn3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/userIn1"
+            android:layout_toStartOf="@id/userIn1"
+            android:layout_alignRight="@id/userIn1"
+            android:layout_alignEnd="@id/userIn1"/>
+
+        <Button
+            android:id="@+id/saveBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_button"
+            android:layout_below="@id/userIn4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
