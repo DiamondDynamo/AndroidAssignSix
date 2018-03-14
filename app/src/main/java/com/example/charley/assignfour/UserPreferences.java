@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class UserPreferences extends AppCompatActivity {
 
-    EditText in1, in2, in3, in4;
+    EditText in1, in2, in3, in4, in5, in6;
     Button submit;
 
     @Override
@@ -30,6 +30,8 @@ public class UserPreferences extends AppCompatActivity {
         in2 = findViewById(R.id.userIn2);
         in3 = findViewById(R.id.userIn3);
         in4 = findViewById(R.id.userIn4);
+        in5 = findViewById(R.id.userIn5);
+        in6 = findViewById(R.id.userIn6);
 
         submit = findViewById(R.id.saveBut);
 
@@ -46,6 +48,10 @@ public class UserPreferences extends AppCompatActivity {
                     editor.putString("in3", in3.getText().toString());
                 if(in4.getText().toString().trim().length() > 0)
                     editor.putString("in4", in4.getText().toString());
+                if(in5.getText().toString().trim().length() > 0)
+                    editor.putString("in5", in5.getText().toString());
+                if(in6.getText().toString().trim().length() > 0)
+                    editor.putString("in6", in6.getText().toString());
 
                 editor.apply();
 
@@ -57,6 +63,8 @@ public class UserPreferences extends AppCompatActivity {
                 in2.setText("");
                 in3.setText("");
                 in4.setText("");
+                in5.setText("");
+                in6.setText("");
             }
         });
 
