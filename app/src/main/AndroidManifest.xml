@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.charley.assignfour">
+    package="com.example.charley.assignfive">
 
     <application
         android:allowBackup="true"
@@ -10,18 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".UserPreferences"
-            android:label="@string/title_activity_user_preferences"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".DisplayPreferences"
-            android:label="@string/title_activity_display_preferences"
+            android:name="com.example.charley.assignfive.AddPersonActivity"
+            android:label="@string/title_activity_display_db"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

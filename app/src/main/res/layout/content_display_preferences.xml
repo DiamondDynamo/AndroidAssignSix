@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.charley.assignfour.DisplayPreferences"
-    tools:showIn="@layout/activity_display_preferences">
+    tools:context="com.example.charley.assignfive.AddPersonActivity"
+    tools:showIn="@layout/activity_display_db">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".DisplayPreferences">
+        tools:context=".AddPersonActivity">
 
         <ListView
             android:layout_width="wrap_content"

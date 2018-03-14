@@ -1,13 +1,11 @@
 <resources>
-    <string name="app_name">AssignFour</string>
-    <string name="title_activity_user_preferences">UserPreferences</string>
-    <string name="input_prompt">Please input a String</string>
-    <string name="sub_button">Save</string>
-    <string name="save">Save</string>
+    <string name="app_name">AssignFive</string>
     <string name="display">Display</string>
-    <string name="clear_prefs">Clear Preferences</string>
+    <string name="clear_db">Clear Preferences</string>
     <string name="em_list">List Empty</string>
-    <string name="settings">Settings</string>
     <string name="em_file">Empty File</string>
-    <string name="title_activity_display_preferences">DisplayPreferences</string>
+    <string name="title_activity_display_db">DisplayDb</string>
+    <string name="nodata">No Data</string>
+    <string name="clearDb">Clear Database</string>
+    <string name="enterVals">Enter Names</string>
 </resources>

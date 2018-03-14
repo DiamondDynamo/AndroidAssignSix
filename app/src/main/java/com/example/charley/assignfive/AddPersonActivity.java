@@ -1,4 +1,4 @@
-package com.example.charley.assignfour;
+package com.example.charley.assignfive;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,25 +16,25 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DisplayPreferences extends AppCompatActivity {
+public class AddPersonActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_preferences);
+        setContentView(R.layout.activity_display_db);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         SharedPreferences preferences = getSharedPreferences("preferences", MODE_PRIVATE);
 
         ArrayList<String> list = new ArrayList<>();
-        if(preferences.contains("in1"))
-            list.add(preferences.getString("in1", ""));
-        if(preferences.contains("in2"))
-            list.add(preferences.getString("in2", ""));
-        if(preferences.contains("in2"))
-            list.add(preferences.getString("in3", ""));
-        if(preferences.contains("in2"))
-            list.add(preferences.getString("in4", ""));
+        if(preferences.contains("fName"))
+            list.add(preferences.getString("fName", ""));
+        if(preferences.contains("lName"))
+            list.add(preferences.getString("lName", ""));
+        if(preferences.contains("lName"))
+            list.add(preferences.getString("email", ""));
+        if(preferences.contains("lName"))
+            list.add(preferences.getString("phone", ""));
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.row_item, R.id.listItem, list);
 
@@ -57,7 +57,7 @@ public class DisplayPreferences extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_for_screens, menu);
+        getMenuInflater().inflate(R.menu.menu_add_person, menu);
         return true;
     }
 
@@ -66,7 +66,7 @@ public class DisplayPreferences extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menuAct1){
-            Intent intent = new Intent(getApplicationContext(), UserPreferences.class);
+            Intent intent = new Intent(getApplicationContext(), DisplayDb.class);
             startActivity(intent);
             return true;
         }
