@@ -1,12 +1,13 @@
-package com.example.charley.assignfive;
+package com.example.charley.assignsix;
 
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,6 +17,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+
+import java.util.List;
 
 import static android.R.id.list;
 
@@ -71,14 +74,24 @@ public class DisplayDb extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Cursor cursor = (Cursor) parent.getItemAtPosition(position);
 
-                String selectedItem = cursor.getString(cursor.getColumnIndex(PersonContract.PersonEntry.COLUMN_NAME_FIRST));
+                String[] selectedEmail = {(String) cursor.getString(cursor.getColumnIndex(PersonContract.PersonEntry.COLUMN_EMAIL))};
+                String selectedLastName = (String) cursor.getString(cursor.getColumnIndex(PersonContract.PersonEntry.COLUMN_NAME_LAST));
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
-                Snackbar.make(view, selectedItem, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, selectedEmail);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, selectedLastName);
 
+                PackageManager pacman = getPackageManager();
+                List<ResolveInfo> activities = pacman.queryIntentActivities(emailIntent, 0);
+                boolean isIntentSafe = activities.size() > 0;
+
+                if(isIntentSafe)
+                    startActivity(emailIntent);
 
             }
 
