@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:context="com.example.charley.assignfive.AddPersonActivity">
     <item
+        android:id="@+id/display"
         android:title="@string/display"
         android:orderInCategory="100"
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/clearDb"
         android:title="@string/clear_db"
         android:orderInCategory="100"
         app:showAsAction="ifRoom" />

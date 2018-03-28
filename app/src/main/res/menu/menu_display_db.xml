@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/enterValues"
         android:title="@string/enterVals"
         android:orderInCategory="100"
         app:showAsAction="ifRoom" />

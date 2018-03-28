@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">AssignFive</string>
     <string name="display">Display</string>
-    <string name="clear_db">Clear Preferences</string>
     <string name="em_list">List Empty</string>
     <string name="em_file">Empty File</string>
     <string name="title_activity_display_db">DisplayDb</string>
     <string name="nodata">No Data</string>
-    <string name="clearDb">Clear Database</string>
+    <string name="clear_db">Clear Database</string>
     <string name="enterVals">Enter Names</string>
+    <string name="fName">First Name</string>
+    <string name="lName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone #</string>
+    <string name="subBut">Save</string>
 </resources>
